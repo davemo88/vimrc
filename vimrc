@@ -40,10 +40,13 @@ set smarttab
 " http://superuser.com/questions/457911/in-vim-background-color-changes-on-scrolling
 set t_ut=
 
+" open a NERDTree window with vi
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" toggle NERDTRee window
 map <C-n> :NERDTreeToggle<CR>
+" make it a lil bigger
 let g:NERDTreeWinSize=42
 
-" toggle paste mode so we don't get crazy indents when pasting code
+" toggle paste mode
 set pastetoggle=<F2>
