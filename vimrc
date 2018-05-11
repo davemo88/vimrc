@@ -20,6 +20,12 @@ Plug 'davidhalter/jedi-vim'
 
 Plug 'gregsexton/MatchTag'
 
+Plug 'vim-latex/vim-latex'
+
+Plug 'tomlion/vim-solidity'
+
+Plug 'Valloric/YouCompleteMe'
+
 call plug#end()
 
 " sweet colorscheme like sublime text :D
@@ -47,6 +53,14 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 map <C-n> :NERDTreeToggle<CR>
 " make it a lil bigger
 let g:NERDTreeWinSize=42
+
+" turn off vim-latex marking
+let g:Imap_UsePlaceHolders = 0
+let g:Tex_DefaultTargetFormat='pdf'
+
+au BufWritePost *.tex silent call Tex_RunLaTeX()
+au BufWritePost *.tex silent !pkill -USR1 xdvi.bin
+
 
 " toggle paste mode
 set pastetoggle=<F2>
