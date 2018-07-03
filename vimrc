@@ -20,6 +20,8 @@ Plug 'davidhalter/jedi-vim'
 
 Plug 'gregsexton/MatchTag'
 
+Plug 'Shougo/vimproc'
+
 call plug#end()
 
 " sweet colorscheme like sublime text :D
