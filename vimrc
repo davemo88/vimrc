@@ -4,21 +4,15 @@ Plug 'tpope/vim-sensible'
 " On-demand loading
 Plug 'scrooloose/nerdtree'
 
-Plug 'Quramy/tsuquyomi'
-
 Plug 'Shougo/vimproc'
-
-Plug 'leafgarland/typescript-vim'
 
 Plug 'Raimondi/delimitMate'
 
 Plug 'sickill/vim-monokai'
 
-Plug 'ervandew/supertab'
+" Plug 'Valloric/YouCompleteMe'
 
-Plug 'davidhalter/jedi-vim'
-
-Plug 'gregsexton/MatchTag'
+" Plug 'Rip-Rip/clang_complete'
 
 Plug 'Shougo/vimproc'
 
@@ -50,5 +44,11 @@ map <C-n> :NERDTreeToggle<CR>
 " make it a lil bigger
 let g:NERDTreeWinSize=42
 
+" turn off vim-latex marking
+let g:Imap_UsePlaceHolders = 0
+let g:Tex_DefaultTargetFormat='pdf'
+
 " toggle paste mode
 set pastetoggle=<F2>
+
+" let g:clang_library_path="/usr/lib/llvm-5.0/lib/libclang.so.1"
