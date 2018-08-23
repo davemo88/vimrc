@@ -4,27 +4,15 @@ Plug 'tpope/vim-sensible'
 " On-demand loading
 Plug 'scrooloose/nerdtree'
 
-Plug 'Quramy/tsuquyomi'
-
 Plug 'Shougo/vimproc'
-
-Plug 'leafgarland/typescript-vim'
 
 Plug 'Raimondi/delimitMate'
 
 Plug 'sickill/vim-monokai'
 
-Plug 'ervandew/supertab'
+" Plug 'Valloric/YouCompleteMe'
 
-Plug 'davidhalter/jedi-vim'
-
-Plug 'gregsexton/MatchTag'
-
-Plug 'vim-latex/vim-latex'
-
-Plug 'tomlion/vim-solidity'
-
-Plug 'Valloric/YouCompleteMe'
+" Plug 'Rip-Rip/clang_complete'
 
 call plug#end()
 
@@ -58,9 +46,7 @@ let g:NERDTreeWinSize=42
 let g:Imap_UsePlaceHolders = 0
 let g:Tex_DefaultTargetFormat='pdf'
 
-au BufWritePost *.tex silent call Tex_RunLaTeX()
-au BufWritePost *.tex silent !pkill -USR1 xdvi.bin
-
-
 " toggle paste mode
 set pastetoggle=<F2>
+
+" let g:clang_library_path="/usr/lib/llvm-5.0/lib/libclang.so.1"
