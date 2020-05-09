@@ -34,8 +34,6 @@ hi DiffAdd ctermfg=231 ctermbg=64 cterm=bold guifg=#f8f8f2 guibg=#46830c gui=bol
 hi DiffChange ctermfg=NONE ctermbg=NONE cterm=NONE guifg=#f8f8f2 guibg=#243955 gui=NONE
 hi DiffText ctermfg=231 ctermbg=24 cterm=bold guifg=#f8f8f2 guibg=#204a87 gui=bold
 hi Title ctermfg=231 ctermbg=NONE cterm=bold guifg=#f8f8f2 guibg=NONE gui=bold
-hi ErrorMsg ctermfg=231 ctermbg=197 cterm=NONE guifg=#f8f8f0 guibg=#f92672 gui=NONE
-hi WarningMsg ctermfg=231 ctermbg=197 cterm=NONE guifg=#f8f8f0 guibg=#f92672 gui=NONE
 hi Directory ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
 hi Boolean ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
 hi Character ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
@@ -49,22 +47,23 @@ hi SignColumn ctermfg=NONE ctermbg=237 cterm=NONE guifg=NONE guibg=#3c3d37 gui=N
 " hi Label ctermfg=186 ctermbg=NONE cterm=NONE guifg=#e6db74 guibg=NONE gui=NONE
 " hi NonText ctermfg=59 ctermbg=236 cterm=NONE guifg=#49483e guibg=#31322c gui=NONE
 " hi SpecialKey ctermfg=59 ctermbg=237 cterm=NONE guifg=#49483e guibg=#3c3d37 gui=NONE
-hi Underlined ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
+" hi Define ctermfg=197 ctermbg=NONE cterm=NONE 
+" hi Tag ctermfg=197 ctermbg=NONE cterm=NONE 
+" hi Underlined ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
 
-hi SpellBad ctermfg=NONE ctermbg=052
+hi SpellBad ctermfg=NONE ctermbg=058
 hi SpellCap ctermfg=NONE ctermbg=029
 hi Function ctermfg=042 ctermbg=NONE cterm=NONE
 hi Keyword ctermfg=228 ctermbg=NONE cterm=NONE 
-hi Type ctermfg=176 ctermbg=NONE cterm=NONE
-hi Define ctermfg=197 ctermbg=NONE cterm=NONE 
-hi Conditional ctermfg=051 ctermbg=NONE cterm=NONE 
+hi MatchParen ctermfg=228 ctermbg=NONE cterm=underline 
 " things like & and mut
 hi StorageClass ctermfg=081 ctermbg=NONE cterm=NONE guifg=#66d9ef guibg=NONE gui=italic
 hi Operator ctermfg=081 ctermbg=NONE cterm=NONE 
-hi PreProc ctermfg=176 ctermbg=NONE cterm=NONE 
-hi Special ctermfg=061 ctermbg=NONE cterm=NONE guifg=#f8f8f2 guibg=NONE gui=NONE
-hi Tag ctermfg=197 ctermbg=NONE cterm=NONE 
-hi MatchParen ctermfg=191 ctermbg=NONE cterm=underline 
-hi String ctermfg=046 ctermbg=NONE cterm=NONE
-hi Identifier ctermfg=176 ctermbg=NONE cterm=NONE 
+hi Conditional ctermfg=081 ctermbg=NONE cterm=NONE 
 hi Statement ctermfg=081 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
+hi PreProc ctermfg=176 ctermbg=NONE cterm=NONE 
+hi Type ctermfg=176 ctermbg=NONE cterm=NONE
+hi Identifier ctermfg=176 ctermbg=NONE cterm=NONE 
+" mostly the :: between rust namespaces
+hi Special ctermfg=061 ctermbg=NONE cterm=NONE guifg=#f8f8f2 guibg=NONE gui=NONE
+hi String ctermfg=046 ctermbg=NONE cterm=NONE
