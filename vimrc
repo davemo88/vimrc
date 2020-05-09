@@ -1,6 +1,4 @@
-set exrc
-
-call plug#begin()
+call plug#begin('~/.vim/plugged')
 
 Plug 'sickill/vim-monokai'
 
@@ -14,19 +12,13 @@ Plug 'universal-ctags/ctags'
 
 Plug 'majutsushi/tagbar'
 
-" Plug 'tpope/vim-sensible'
+Plug 'Raimondi/delimitMate'
 
-" Plug 'Shougo/vimproc'
-
-" Plug 'Raimondi/delimitMate'
-"
 call plug#end()
 
-" " sweet colorscheme like sublime text :D
-colorscheme monokai
-"syntax enable
+syntax enable
+colorscheme garbage 
 
-"
 let g:ycm_language_server =
   \ [
   \   {
@@ -39,7 +31,7 @@ let g:ycm_language_server =
 
 let g:rust_use_custom_ctags_defs = 1  " if using rust.vim
 let g:tagbar_type_rust = {
-  \ 'ctagsbin' : '/usr/local/bin/ctags',
+  \ 'ctagsbin' : '~/.local/bin/ctags',
   \ 'ctagstype' : 'rust',
   \ 'kinds' : [
       \ 'n:modules',
@@ -72,15 +64,15 @@ let g:tagbar_type_rust = {
   \ },
 \ }
 " 
-" " autocomplete parens and the like and insert a newline 
-" let delimitMate_expand_cr = 1
+" autocomplete parens and the like and insert a newline 
+let delimitMate_expand_cr = 1
 " 
-" " use 4 spaces instead of tabs
-" set tabstop=8
-" set softtabstop=0
-" set expandtab
-" set shiftwidth=2
-" set smarttab
+" use 4 spaces instead of tabs
+set tabstop=8
+set softtabstop=0
+set expandtab
+set shiftwidth=4
+set smarttab
 " 
 " fix background color when scrolling
 " http://superuser.com/questions/457911/in-vim-background-color-changes-on-scrolling
@@ -103,5 +95,5 @@ nmap <F8> :TagbarToggle<CR>
 " let g:Imap_UsePlaceHolders = 0
 " let g:Tex_DefaultTargetFormat='pdf'
 " 
-" " toggle paste mode
-" set pastetoggle=<F2>
+" toggle paste mode
+set pastetoggle=<F2>
