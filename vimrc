@@ -19,15 +19,15 @@ call plug#end()
 syntax enable
 colorscheme garbage 
 
-let g:ycm_language_server =
-  \ [
-  \   {
-  \     'name': 'rust',
-  \     'cmdline': [ 'rust-analyzer' ],
-  \     'filetypes': [ 'rust' ],
-  \     'project_root_files': [ 'Cargo.toml' ]
-  \   }
-  \ ]
+" let g:ycm_language_server =
+"   \ [
+"   \   {
+"   \     'name': 'rust',
+"   \     'cmdline': [ 'rust-analyzer' ],
+"   \     'filetypes': [ 'rust' ],
+"   \     'project_root_files': [ 'Cargo.toml' ]
+"   \   }
+"   \ ]
 
 let g:rust_use_custom_ctags_defs = 1  " if using rust.vim
 let g:tagbar_type_rust = {
@@ -76,11 +76,8 @@ set smarttab
 " 
 " fix background color when scrolling
 " http://superuser.com/questions/457911/in-vim-background-color-changes-on-scrolling
-set t_ut=
+" set t_ut=
 " 
-" open a Tagbar window on start
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | TagbarOpen | endif
 " open a NERDTree window on start
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
@@ -90,10 +87,20 @@ map <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeWinSize=42
 
 nmap <F8> :TagbarToggle<CR>
-" 
-" " turn off vim-latex marking
-" let g:Imap_UsePlaceHolders = 0
-" let g:Tex_DefaultTargetFormat='pdf'
-" 
-" toggle paste mode
+
 set pastetoggle=<F2>
+
+augroup YcmGoto
+    autocmd!
+    autocmd FileType rust nnoremap <silent> gd :YcmCompleter GoToDefinition<CR>
+    autocmd FileType rust nnoremap <silent> <leader>gd :YcmCompleter GetDoc<CR>
+augroup END
+
+" show which syntax rules are used under the cursor.
+" :call SynStack()
+function! SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
