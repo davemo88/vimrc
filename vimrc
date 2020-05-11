@@ -96,6 +96,8 @@ augroup YcmGoto
     autocmd FileType rust nnoremap <silent> <leader>gd :YcmCompleter GetDoc<CR>
 augroup END
 
+let g:ycm_goto_buffer_command='split-or-existing-window'
+
 " show which syntax rules are used under the cursor.
 " :call SynStack()
 function! SynStack()

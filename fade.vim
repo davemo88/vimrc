@@ -53,8 +53,8 @@ hi SignColumn ctermfg=NONE ctermbg=237 cterm=NONE guifg=NONE guibg=#3c3d37 gui=N
 
 hi SpellBad ctermfg=NONE ctermbg=058
 hi YcmErrorSign ctermfg=NONE ctermbg=058
-hi SpellCap ctermfg=NONE ctermbg=029
-hi YcmWarningSign ctermfg=NONE ctermbg=029
+hi SpellCap ctermfg=NONE ctermbg=060
+hi YcmWarningSign ctermfg=NONE ctermbg=060
 hi Function ctermfg=085 ctermbg=NONE cterm=NONE
 hi Keyword ctermfg=228 ctermbg=NONE cterm=NONE 
 hi MatchParen ctermfg=228 ctermbg=NONE cterm=underline 
