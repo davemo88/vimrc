@@ -1,6 +1,4 @@
-set exrc
-
-call plug#begin()
+call plug#begin('~/.vim/plugged')
 
 Plug 'sickill/vim-monokai'
 
@@ -16,32 +14,16 @@ Plug 'universal-ctags/ctags'
 
 Plug 'majutsushi/tagbar'
 
-" Plug 'tpope/vim-sensible'
+Plug 'Raimondi/delimitMate'
 
-" Plug 'Shougo/vimproc'
-
-" Plug 'Raimondi/delimitMate'
-"
 call plug#end()
 
-" " sweet colorscheme like sublime text :D
-colorscheme monokai
-"syntax enable
-
-"
-let g:ycm_language_server =
-  \ [
-  \   {
-  \     'name': 'rust',
-  \     'cmdline': [ 'rust-analyzer' ],
-  \     'filetypes': [ 'rust' ],
-  \     'project_root_files': [ 'Cargo.toml' ]
-  \   }
-  \ ]
+syntax enable
+colorscheme garbage 
 
 let g:rust_use_custom_ctags_defs = 1  " if using rust.vim
 let g:tagbar_type_rust = {
-  \ 'ctagsbin' : '/usr/local/bin/ctags',
+  \ 'ctagsbin' : '~/.local/bin/ctags',
   \ 'ctagstype' : 'rust',
   \ 'kinds' : [
       \ 'n:modules',
@@ -74,23 +56,16 @@ let g:tagbar_type_rust = {
   \ },
 \ }
 " 
-" " autocomplete parens and the like and insert a newline 
-" let delimitMate_expand_cr = 1
+" autocomplete parens and the like and insert a newline 
+let delimitMate_expand_cr = 1
 " 
-" " use 4 spaces instead of tabs
-" set tabstop=8
-" set softtabstop=0
-" set expandtab
-" set shiftwidth=2
-" set smarttab
-" 
-" fix background color when scrolling
-" http://superuser.com/questions/457911/in-vim-background-color-changes-on-scrolling
-set t_ut=
-" 
-" open a Tagbar window on start
- autocmd StdinReadPre * let s:std_in=1
- autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | TagbarOpen | endif
+" use 4 spaces instead of tabs
+set tabstop=8
+set softtabstop=0
+set expandtab
+set shiftwidth=4
+set smarttab
+
 " open a NERDTree window on start
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
@@ -100,24 +75,21 @@ map <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeWinSize=42
 
 nmap <F8> :TagbarToggle<CR>
-" 
-" " turn off vim-latex marking
-" let g:Imap_UsePlaceHolders = 0
-" let g:Tex_DefaultTargetFormat='pdf'
-" 
-" toggle paste mode
 set pastetoggle=<F2>
-"
-" set hidden
-" let g:racer_cmd = "$HOME/.cargo/bin/racer"
-" let g:racer_experimental_completer = 1
-" let g:racer_insert_paren = 1
-" 
-" augroup Racer
-"     autocmd!
-"     autocmd FileType rust nmap <buffer> gd         <Plug>(rust-def)
-"     autocmd FileType rust nmap <buffer> gs         <Plug>(rust-def-split)
-"     autocmd FileType rust nmap <buffer> gx         <Plug>(rust-def-vertical)
-"     autocmd FileType rust nmap <buffer> gt         <Plug>(rust-def-tab)
-"     autocmd FileType rust nmap <buffer> <leader>gd <Plug>(rust-doc)
-" augroup END
+
+augroup YcmGoto
+    autocmd!
+    autocmd FileType rust nnoremap <silent> gd :YcmCompleter GoToDefinition<CR>
+    autocmd FileType rust nnoremap <silent> <leader>gd :YcmCompleter GetDoc<CR>
+augroup END
+
+let g:ycm_goto_buffer_command='split-or-existing-window'
+
+" show which syntax rules are used under the cursor.
+" :call SynStack()
+function! SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
