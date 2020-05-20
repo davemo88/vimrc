@@ -6,6 +6,8 @@ Plug 'scrooloose/nerdtree'
 
 Plug 'rust-lang/rust.vim'
 
+" Plug 'racer-rust/vim-racer'
+
 Plug 'Valloric/YouCompleteMe'
 
 Plug 'universal-ctags/ctags'
@@ -18,16 +20,6 @@ call plug#end()
 
 syntax enable
 colorscheme garbage 
-
-" let g:ycm_language_server =
-"   \ [
-"   \   {
-"   \     'name': 'rust',
-"   \     'cmdline': [ 'rust-analyzer' ],
-"   \     'filetypes': [ 'rust' ],
-"   \     'project_root_files': [ 'Cargo.toml' ]
-"   \   }
-"   \ ]
 
 let g:rust_use_custom_ctags_defs = 1  " if using rust.vim
 let g:tagbar_type_rust = {
@@ -73,11 +65,7 @@ set softtabstop=0
 set expandtab
 set shiftwidth=4
 set smarttab
-" 
-" fix background color when scrolling
-" http://superuser.com/questions/457911/in-vim-background-color-changes-on-scrolling
-" set t_ut=
-" 
+
 " open a NERDTree window on start
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
@@ -87,7 +75,6 @@ map <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeWinSize=42
 
 nmap <F8> :TagbarToggle<CR>
-
 set pastetoggle=<F2>
 
 augroup YcmGoto
