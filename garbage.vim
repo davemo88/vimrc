@@ -1,5 +1,6 @@
 " Vim color file
-" Converted from Textmate theme Monokai using Coloration v0.3.2 (http://github.com/sickill/coloration)
+" :so $VIMRUNTIME/syntax/hitest.vim to see all active groups
+
 
 set background=dark
 highlight clear
@@ -75,3 +76,6 @@ hi NERDTreeDirSlash ctermfg=141 ctermbg=NONE
 
 " rust
 hi rustMacro ctermfg=228 ctermbg=NONE
+hi rustDerive ctermfg=061 ctermbg=NONE
+hi rustDeriveTrait ctermfg=231 ctermbg=NONE
+hi rustAttribute ctermfg=061 ctermbg=NONE

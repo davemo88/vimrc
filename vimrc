@@ -97,6 +97,7 @@ augroup YcmGoto
 augroup END
 
 let g:ycm_goto_buffer_command='split-or-existing-window'
+let g:ycm_autoclose_preview_window_after_insertion = 1
 
 " show which syntax rules are used under the cursor.
 " :call SynStack()
@@ -106,3 +107,4 @@ function! SynStack()
   endif
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
+
