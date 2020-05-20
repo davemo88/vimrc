@@ -8,6 +8,8 @@ Plug 'scrooloose/nerdtree'
 
 Plug 'rust-lang/rust.vim'
 
+" Plug 'racer-rust/vim-racer'
+
 Plug 'Valloric/YouCompleteMe'
 
 Plug 'universal-ctags/ctags'
@@ -87,8 +89,8 @@ let g:tagbar_type_rust = {
 set t_ut=
 " 
 " open a Tagbar window on start
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | TagbarOpen | endif
+ autocmd StdinReadPre * let s:std_in=1
+ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | TagbarOpen | endif
 " open a NERDTree window on start
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
@@ -103,5 +105,19 @@ nmap <F8> :TagbarToggle<CR>
 " let g:Imap_UsePlaceHolders = 0
 " let g:Tex_DefaultTargetFormat='pdf'
 " 
-" " toggle paste mode
-" set pastetoggle=<F2>
+" toggle paste mode
+set pastetoggle=<F2>
+"
+" set hidden
+" let g:racer_cmd = "$HOME/.cargo/bin/racer"
+" let g:racer_experimental_completer = 1
+" let g:racer_insert_paren = 1
+" 
+" augroup Racer
+"     autocmd!
+"     autocmd FileType rust nmap <buffer> gd         <Plug>(rust-def)
+"     autocmd FileType rust nmap <buffer> gs         <Plug>(rust-def-split)
+"     autocmd FileType rust nmap <buffer> gx         <Plug>(rust-def-vertical)
+"     autocmd FileType rust nmap <buffer> gt         <Plug>(rust-def-tab)
+"     autocmd FileType rust nmap <buffer> <leader>gd <Plug>(rust-doc)
+" augroup END
