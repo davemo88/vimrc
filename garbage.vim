@@ -52,10 +52,10 @@ hi SignColumn ctermfg=NONE ctermbg=237 cterm=NONE guifg=NONE guibg=#3c3d37 gui=N
 " hi Tag ctermfg=197 ctermbg=NONE cterm=NONE 
 " hi Underlined ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
 
-hi SpellBad ctermfg=NONE ctermbg=058
-hi YcmErrorSign ctermfg=NONE ctermbg=058
-hi SpellCap ctermfg=NONE ctermbg=029
-hi YcmWarningSign ctermfg=NONE ctermbg=029
+hi SpellBad ctermfg=NONE ctermbg=064
+hi YcmErrorSign ctermfg=NONE ctermbg=064 cterm=italic
+hi SpellCap ctermfg=NONE ctermbg=235
+hi YcmWarningSign ctermfg=064 ctermbg=237 cterm=italic
 hi Function ctermfg=085 ctermbg=NONE cterm=NONE
 hi Keyword ctermfg=228 ctermbg=NONE cterm=NONE 
 hi MatchParen ctermfg=228 ctermbg=NONE cterm=underline 
