@@ -4,6 +4,8 @@ Plug 'scrooloose/nerdtree'
 
 Plug 'rust-lang/rust.vim'
 
+Plug 'peitalin/vim-jsx-typescript'
+
 Plug 'Valloric/YouCompleteMe'
 
 Plug 'Raimondi/delimitMate'
@@ -50,4 +52,12 @@ function! SynStack()
   endif
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
+
+
+:autocmd Filetype typescript.tsx set softtabstop=2
+:autocmd Filetype typescript.tsx set sw=2
+:autocmd Filetype typescript.tsx set ts=2
+:autocmd Filetype typescript set softtabstop=2
+:autocmd Filetype typescript set sw=2
+:autocmd Filetype typescript set ts=2
 
