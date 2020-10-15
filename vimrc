@@ -6,6 +6,9 @@ Plug 'rust-lang/rust.vim'
 
 Plug 'Valloric/YouCompleteMe'
 
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+
 Plug 'Raimondi/delimitMate'
 
 call plug#end()
@@ -50,4 +53,7 @@ function! SynStack()
   endif
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
+
+" set filetypes as typescript.tsx
+autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
 
