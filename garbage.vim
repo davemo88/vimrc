@@ -52,6 +52,8 @@ hi SignColumn ctermfg=NONE ctermbg=237 cterm=NONE guifg=NONE guibg=#3c3d37 gui=N
 " hi Tag ctermfg=197 ctermbg=NONE cterm=NONE 
 " hi Underlined ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
 
+hi Error ctermfg=NONE ctermbg=064
+
 hi SpellBad ctermfg=NONE ctermbg=064
 hi YcmErrorSign ctermfg=NONE ctermbg=064 cterm=italic
 hi SpellCap ctermfg=NONE ctermbg=235
