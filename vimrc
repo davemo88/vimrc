@@ -9,6 +9,7 @@ Plug 'peitalin/vim-jsx-typescript'
 Plug 'Valloric/YouCompleteMe'
 
 Plug 'leafgarland/typescript-vim'
+
 Plug 'peitalin/vim-jsx-typescript'
 
 Plug 'Raimondi/delimitMate'
