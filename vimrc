@@ -10,8 +10,6 @@ Plug 'leafgarland/typescript-vim'
 
 Plug 'peitalin/vim-jsx-typescript'
 
-Plug 'Raimondi/delimitMate'
-
 call plug#end()
 
 syntax enable
@@ -72,4 +70,6 @@ autocmd Filetype typescript.tsx set ts=2
 autocmd Filetype typescript set softtabstop=2
 autocmd Filetype typescript set sw=2
 autocmd Filetype typescript set ts=2
+" inoremap <Esc> <Esc>:w<Cr>
+
 

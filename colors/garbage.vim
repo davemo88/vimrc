@@ -64,7 +64,7 @@ hi MatchParen ctermfg=228 ctermbg=NONE cterm=underline
 " things like & and mut
 hi StorageClass ctermfg=081 ctermbg=NONE cterm=NONE guifg=#66d9ef guibg=NONE gui=italic
 hi Operator ctermfg=081 ctermbg=NONE cterm=NONE 
-hi Conditional ctermfg=081 ctermbg=NONE cterm=NONE 
+hi Conditional ctermfg=228 ctermbg=NONE cterm=NONE 
 hi Statement ctermfg=081 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
 hi PreProc ctermfg=176 ctermbg=NONE cterm=NONE 
 hi Type ctermfg=176 ctermbg=NONE cterm=NONE
@@ -77,7 +77,8 @@ hi String ctermfg=046 ctermbg=NONE cterm=NONE
 hi NERDTreeDirSlash ctermfg=141 ctermbg=NONE
 
 " rust
-hi rustMacro ctermfg=228 ctermbg=NONE
+hi rustAssert ctermfg=085 ctermbg=NONE
+hi rustMacro ctermfg=085 ctermbg=NONE
 hi rustDerive ctermfg=061 ctermbg=NONE
-hi rustDeriveTrait ctermfg=231 ctermbg=NONE
+hi rustDeriveTrait ctermfg=061 ctermbg=NONE
 hi rustAttribute ctermfg=061 ctermbg=NONE
