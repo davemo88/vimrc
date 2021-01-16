@@ -35,11 +35,11 @@ hi DiffAdd ctermfg=231 ctermbg=64 cterm=bold guifg=#f8f8f2 guibg=#46830c gui=bol
 hi DiffChange ctermfg=NONE ctermbg=NONE cterm=NONE guifg=#f8f8f2 guibg=#243955 gui=NONE
 hi DiffText ctermfg=231 ctermbg=24 cterm=bold guifg=#f8f8f2 guibg=#204a87 gui=bold
 hi Title ctermfg=231 ctermbg=NONE cterm=bold guifg=#f8f8f2 guibg=NONE gui=bold
-hi Directory ctermfg=046 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
-hi Boolean ctermfg=227 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
-hi Character ctermfg=046 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
-hi Number ctermfg=046 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
-hi Float ctermfg=046 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
+hi Directory ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
+hi Boolean ctermfg=077 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
+hi Character ctermfg=077 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
+hi Number ctermfg=077 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
+hi Float ctermfg=077 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
 
 hi DiffDelete ctermfg=88 ctermbg=NONE cterm=NONE guifg=#8b0797 guibg=NONE gui=NONE
 
@@ -58,9 +58,9 @@ hi SpellBad ctermfg=NONE ctermbg=064
 hi YcmErrorSign ctermfg=NONE ctermbg=064 cterm=italic
 hi SpellCap ctermfg=NONE ctermbg=235
 hi YcmWarningSign ctermfg=064 ctermbg=237 cterm=italic
-hi Function ctermfg=077 ctermbg=NONE cterm=NONE
+hi Function ctermfg=176 ctermbg=NONE cterm=NONE
 hi Keyword ctermfg=227 ctermbg=NONE cterm=NONE 
-hi MatchParen ctermfg=227 ctermbg=NONE cterm=underline 
+hi MatchParen ctermfg=077 ctermbg=NONE cterm=underline 
 " things like & and mut
 hi StorageClass ctermfg=079 ctermbg=NONE cterm=NONE guifg=#66d9ef guibg=NONE gui=italic
 hi Operator ctermfg=079 ctermbg=NONE cterm=NONE 
@@ -71,10 +71,10 @@ hi Type ctermfg=176 ctermbg=NONE cterm=NONE
 hi Identifier ctermfg=176 ctermbg=NONE cterm=NONE 
 " mostly the :: between rust namespaces
 hi Special ctermfg=061 ctermbg=NONE cterm=NONE guifg=#f8f8f2 guibg=NONE gui=NONE
-hi String ctermfg=046 ctermbg=NONE cterm=NONE
+hi String ctermfg=077 ctermbg=NONE cterm=NONE
 
 "NERDTree
-hi NERDTreeDirSlash ctermfg=046
+hi NERDTreeDirSlash ctermfg=141
 
 " rust
 hi rustAssert ctermfg=077
@@ -84,8 +84,8 @@ hi rustDerive ctermfg=061
 hi rustDeriveTrait ctermfg=061
 hi rustEnumVariant ctermfg=176
 hi rustConstant ctermfg=064
-hi rustMacro ctermfg=077
-hi rustPanic ctermfg=077
+hi rustMacro ctermfg=227
+hi rustPanic ctermfg=160
 " hi rustSelf ctermfg=227
 hi rustSigil ctermfg=079 
 hi rustStorage ctermfg=227 
