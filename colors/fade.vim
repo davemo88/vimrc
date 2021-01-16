@@ -35,11 +35,11 @@ hi DiffAdd ctermfg=231 ctermbg=64 cterm=bold guifg=#f8f8f2 guibg=#46830c gui=bol
 hi DiffChange ctermfg=NONE ctermbg=NONE cterm=NONE guifg=#f8f8f2 guibg=#243955 gui=NONE
 hi DiffText ctermfg=231 ctermbg=24 cterm=bold guifg=#f8f8f2 guibg=#204a87 gui=bold
 hi Title ctermfg=231 ctermbg=NONE cterm=bold guifg=#f8f8f2 guibg=NONE gui=bold
-hi Directory ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
+hi Directory ctermfg=046 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
 hi Boolean ctermfg=227 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
-hi Character ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
-hi Number ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
-hi Float ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
+hi Character ctermfg=046 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
+hi Number ctermfg=046 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
+hi Float ctermfg=046 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
 
 hi DiffDelete ctermfg=88 ctermbg=NONE cterm=NONE guifg=#8b0797 guibg=NONE gui=NONE
 
@@ -74,7 +74,7 @@ hi Special ctermfg=061 ctermbg=NONE cterm=NONE guifg=#f8f8f2 guibg=NONE gui=NONE
 hi String ctermfg=046 ctermbg=NONE cterm=NONE
 
 "NERDTree
-hi NERDTreeDirSlash ctermfg=141
+hi NERDTreeDirSlash ctermfg=046
 
 " rust
 hi rustAssert ctermfg=077
