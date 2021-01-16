@@ -78,7 +78,9 @@ hi NERDTreeDirSlash ctermfg=141 ctermbg=NONE
 
 " rust
 hi rustAssert ctermfg=085 ctermbg=NONE
+hi rustAttribute ctermfg=061 ctermbg=NONE
 hi rustMacro ctermfg=085 ctermbg=NONE
 hi rustDerive ctermfg=061 ctermbg=NONE
 hi rustDeriveTrait ctermfg=061 ctermbg=NONE
-hi rustAttribute ctermfg=061 ctermbg=NONE
+hi rustStorage ctermfg=228 ctermbg=NONE
+hi rustSigil ctermfg=081 ctermbg=NONE
