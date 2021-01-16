@@ -36,12 +36,12 @@ hi DiffChange ctermfg=NONE ctermbg=NONE cterm=NONE guifg=#f8f8f2 guibg=#243955 g
 hi DiffText ctermfg=231 ctermbg=24 cterm=bold guifg=#f8f8f2 guibg=#204a87 gui=bold
 hi Title ctermfg=231 ctermbg=NONE cterm=bold guifg=#f8f8f2 guibg=NONE gui=bold
 hi Directory ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
-hi Boolean ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
+hi Boolean ctermfg=227 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
 hi Character ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
 hi Number ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
 hi Float ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
 
-hi DiffDelete ctermfg=88 ctermbg=NONE cterm=NONE guifg=#8b0807 guibg=NONE gui=NONE
+hi DiffDelete ctermfg=88 ctermbg=NONE cterm=NONE guifg=#8b0797 guibg=NONE gui=NONE
 
 hi Todo ctermfg=95 ctermbg=NONE cterm=inverse,bold guifg=#75715e guibg=NONE gui=inverse,bold
 hi SignColumn ctermfg=NONE ctermbg=237 cterm=NONE guifg=NONE guibg=#3c3d37 gui=NONE
@@ -58,14 +58,14 @@ hi SpellBad ctermfg=NONE ctermbg=064
 hi YcmErrorSign ctermfg=NONE ctermbg=064 cterm=italic
 hi SpellCap ctermfg=NONE ctermbg=235
 hi YcmWarningSign ctermfg=064 ctermbg=237 cterm=italic
-hi Function ctermfg=084 ctermbg=NONE cterm=NONE
+hi Function ctermfg=077 ctermbg=NONE cterm=NONE
 hi Keyword ctermfg=227 ctermbg=NONE cterm=NONE 
 hi MatchParen ctermfg=227 ctermbg=NONE cterm=underline 
 " things like & and mut
-hi StorageClass ctermfg=080 ctermbg=NONE cterm=NONE guifg=#66d9ef guibg=NONE gui=italic
-hi Operator ctermfg=080 ctermbg=NONE cterm=NONE 
+hi StorageClass ctermfg=079 ctermbg=NONE cterm=NONE guifg=#66d9ef guibg=NONE gui=italic
+hi Operator ctermfg=079 ctermbg=NONE cterm=NONE 
 hi Conditional ctermfg=227 ctermbg=NONE cterm=NONE 
-hi Statement ctermfg=080 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
+hi Statement ctermfg=079 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
 hi PreProc ctermfg=176 ctermbg=NONE cterm=NONE 
 hi Type ctermfg=176 ctermbg=NONE cterm=NONE
 hi Identifier ctermfg=176 ctermbg=NONE cterm=NONE 
@@ -77,17 +77,17 @@ hi String ctermfg=046 ctermbg=NONE cterm=NONE
 hi NERDTreeDirSlash ctermfg=141
 
 " rust
-hi rustAssert ctermfg=084
+hi rustAssert ctermfg=077
 hi rustAttribute ctermfg=061
 hi rustFuncCall ctermfg=188 
 hi rustDerive ctermfg=061
 hi rustDeriveTrait ctermfg=061
 hi rustEnumVariant ctermfg=176
 hi rustConstant ctermfg=064
-hi rustMacro ctermfg=084
-hi rustPanic ctermfg=084
+hi rustMacro ctermfg=077
+hi rustPanic ctermfg=077
 " hi rustSelf ctermfg=227
-hi rustSigil ctermfg=080 
+hi rustSigil ctermfg=079 
 hi rustStorage ctermfg=227 
 hi rustSuper ctermfg=176
 
@@ -95,7 +95,3 @@ hi rustSuper ctermfg=176
 " see :help mysyntaxfile-add
 " syn match MyParens /[\[\]\(\)\{\}]/
 hi MyParens ctermfg=187
-
-" syn match MyParens 
-
-" syn match MyParens 
