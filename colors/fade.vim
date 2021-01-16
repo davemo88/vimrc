@@ -69,9 +69,9 @@ hi Statement ctermfg=079 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NO
 hi PreProc ctermfg=176 ctermbg=NONE cterm=NONE 
 hi Type ctermfg=176 ctermbg=NONE cterm=NONE
 hi Identifier ctermfg=176 ctermbg=NONE cterm=NONE 
+hi String ctermfg=077 ctermbg=NONE cterm=NONE
 " mostly the :: between rust namespaces
 hi Special ctermfg=061 ctermbg=NONE cterm=NONE guifg=#f8f8f2 guibg=NONE gui=NONE
-hi String ctermfg=077 ctermbg=NONE cterm=NONE
 
 "NERDTree
 hi NERDTreeDirSlash ctermfg=141
@@ -94,4 +94,6 @@ hi rustSuper ctermfg=176
 " put this line in .vim/after/syntax/rust.vim
 " see :help mysyntaxfile-add
 " syn match MyParens /[\[\]\(\)\{\}]/
+" syn match MySemicolons /;/
 hi MyParens ctermfg=187
+hi MySemicolons ctermfg=187
