@@ -13,7 +13,7 @@ Plug 'peitalin/vim-jsx-typescript'
 call plug#end()
 
 syntax enable
-colorscheme garbage 
+colorscheme fade 
 
 " autocomplete parens and the like and insert a newline 
 let delimitMate_expand_cr = 1
@@ -71,5 +71,4 @@ autocmd Filetype typescript set softtabstop=2
 autocmd Filetype typescript set sw=2
 autocmd Filetype typescript set ts=2
 " inoremap <Esc> <Esc>:w<Cr>
-
-
+autocmd Syntax syn match MyParens /[\[\]\(\)\{\}]/

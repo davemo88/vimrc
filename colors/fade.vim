@@ -1,5 +1,6 @@
 " Vim color file
-" Converted from Textmate theme Monokai using Coloration v0.3.2 (http://github.com/sickill/coloration)
+" :so $VIMRUNTIME/syntax/hitest.vim to see all active groups
+
 
 set background=dark
 highlight clear
@@ -29,7 +30,7 @@ hi Constant ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 
 hi StatusLine ctermfg=231 ctermbg=241 cterm=bold guifg=#f8f8f2 guibg=#64645e gui=bold
 hi StatusLineNC ctermfg=231 ctermbg=241 cterm=NONE guifg=#f8f8f2 guibg=#64645e gui=NONE
-hi Normal ctermfg=231 ctermbg=235 cterm=NONE guifg=#f8f8f2 guibg=#272822 gui=NONE
+hi Normal ctermfg=188 ctermbg=235 cterm=NONE guifg=#f8f8f2 guibg=#272822 gui=NONE
 hi DiffAdd ctermfg=231 ctermbg=64 cterm=bold guifg=#f8f8f2 guibg=#46830c gui=bold
 hi DiffChange ctermfg=NONE ctermbg=NONE cterm=NONE guifg=#f8f8f2 guibg=#243955 gui=NONE
 hi DiffText ctermfg=231 ctermbg=24 cterm=bold guifg=#f8f8f2 guibg=#204a87 gui=bold
@@ -51,18 +52,20 @@ hi SignColumn ctermfg=NONE ctermbg=237 cterm=NONE guifg=NONE guibg=#3c3d37 gui=N
 " hi Tag ctermfg=197 ctermbg=NONE cterm=NONE 
 " hi Underlined ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
 
-hi SpellBad ctermfg=NONE ctermbg=058
-hi YcmErrorSign ctermfg=NONE ctermbg=058
-hi SpellCap ctermfg=NONE ctermbg=060
-hi YcmWarningSign ctermfg=NONE ctermbg=060
-hi Function ctermfg=085 ctermbg=NONE cterm=NONE
-hi Keyword ctermfg=228 ctermbg=NONE cterm=NONE 
-hi MatchParen ctermfg=228 ctermbg=NONE cterm=underline 
+hi Error ctermfg=NONE ctermbg=064
+
+hi SpellBad ctermfg=NONE ctermbg=064
+hi YcmErrorSign ctermfg=NONE ctermbg=064 cterm=italic
+hi SpellCap ctermfg=NONE ctermbg=235
+hi YcmWarningSign ctermfg=064 ctermbg=237 cterm=italic
+hi Function ctermfg=084 ctermbg=NONE cterm=NONE
+hi Keyword ctermfg=227 ctermbg=NONE cterm=NONE 
+hi MatchParen ctermfg=227 ctermbg=NONE cterm=underline 
 " things like & and mut
-hi StorageClass ctermfg=081 ctermbg=NONE cterm=NONE guifg=#66d9ef guibg=NONE gui=italic
-hi Operator ctermfg=081 ctermbg=NONE cterm=NONE 
-hi Conditional ctermfg=228 ctermbg=NONE cterm=NONE 
-hi Statement ctermfg=228 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
+hi StorageClass ctermfg=080 ctermbg=NONE cterm=NONE guifg=#66d9ef guibg=NONE gui=italic
+hi Operator ctermfg=080 ctermbg=NONE cterm=NONE 
+hi Conditional ctermfg=227 ctermbg=NONE cterm=NONE 
+hi Statement ctermfg=080 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
 hi PreProc ctermfg=176 ctermbg=NONE cterm=NONE 
 hi Type ctermfg=176 ctermbg=NONE cterm=NONE
 hi Identifier ctermfg=176 ctermbg=NONE cterm=NONE 
@@ -71,8 +74,28 @@ hi Special ctermfg=061 ctermbg=NONE cterm=NONE guifg=#f8f8f2 guibg=NONE gui=NONE
 hi String ctermfg=046 ctermbg=NONE cterm=NONE
 
 "NERDTree
-hi NERDTreeDirSlash ctermfg=141 ctermbg=NONE
+hi NERDTreeDirSlash ctermfg=141
 
 " rust
-hi rustMacro ctermfg=085 ctermbg=NONE
-hi rustAssert ctermfg=085 ctermbg=NONE
+hi rustAssert ctermfg=084
+hi rustAttribute ctermfg=061
+hi rustFuncCall ctermfg=188 
+hi rustDerive ctermfg=061
+hi rustDeriveTrait ctermfg=061
+hi rustEnumVariant ctermfg=176
+hi rustConstant ctermfg=064
+hi rustMacro ctermfg=084
+hi rustPanic ctermfg=084
+" hi rustSelf ctermfg=227
+hi rustSigil ctermfg=080 
+hi rustStorage ctermfg=227 
+hi rustSuper ctermfg=176
+
+" put this line in .vim/after/syntax/rust.vim
+" see :help mysyntaxfile-add
+" syn match MyParens /[\[\]\(\)\{\}]/
+hi MyParens ctermfg=187
+
+" syn match MyParens 
+
+" syn match MyParens 
