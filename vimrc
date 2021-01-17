@@ -4,6 +4,8 @@ Plug 'scrooloose/nerdtree'
 
 Plug 'rust-lang/rust.vim'
 
+" Plug 'arzg/vim-rust-syntax-ext'
+
 Plug 'Valloric/YouCompleteMe'
 
 Plug 'leafgarland/typescript-vim'

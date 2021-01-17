@@ -63,7 +63,6 @@ hi Keyword ctermfg=227 ctermbg=NONE cterm=NONE
 hi MatchParen ctermfg=077 ctermbg=NONE cterm=underline 
 " things like & and mut
 hi StorageClass ctermfg=079 ctermbg=NONE cterm=NONE guifg=#66d9ef guibg=NONE gui=italic
-hi Operator ctermfg=079 ctermbg=NONE cterm=NONE 
 hi Conditional ctermfg=227 ctermbg=NONE cterm=NONE 
 hi Statement ctermfg=079 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
 hi PreProc ctermfg=176 ctermbg=NONE cterm=NONE 
@@ -86,7 +85,7 @@ hi rustEnumVariant ctermfg=176
 hi rustConstant ctermfg=064
 hi rustMacro ctermfg=227
 hi rustPanic ctermfg=160
-" hi rustSelf ctermfg=227
+hi rustSelf ctermfg=227
 hi rustSigil ctermfg=079 
 hi rustStorage ctermfg=227 
 hi rustSuper ctermfg=176
@@ -94,3 +93,9 @@ hi rustSuper ctermfg=176
 " don't forget to link after/ in ~/.vim/
 hi MyParens ctermfg=187
 hi MySemicolons ctermfg=187
+hi MyAngleBrace ctermfg=079
+hi rsUserType ctermfg=176
+hi rsForeignType ctermfg=176
+hi rsCrateType ctermfg=176
+hi rsUserConst ctermfg=077
+hi rsOperator ctermfg=079 ctermbg=NONE cterm=NONE 
