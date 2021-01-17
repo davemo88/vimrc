@@ -77,7 +77,7 @@ hi Special ctermfg=061 ctermbg=NONE cterm=NONE guifg=#f8f8f2 guibg=NONE gui=NONE
 hi NERDTreeDirSlash ctermfg=141
 
 " rust
-hi rustAssert ctermfg=077
+hi rustAssert ctermfg=227
 hi rustAttribute ctermfg=061
 hi rustFuncCall ctermfg=188 
 hi rustDerive ctermfg=061
@@ -91,9 +91,6 @@ hi rustSigil ctermfg=079
 hi rustStorage ctermfg=227 
 hi rustSuper ctermfg=176
 
-" put this line in .vim/after/syntax/rust.vim
-" see :help mysyntaxfile-add
-" syn match MyParens /[\[\]\(\)\{\}]/
-" syn match MySemicolons /;/
+" don't forget to link after/ in ~/.vim/
 hi MyParens ctermfg=187
 hi MySemicolons ctermfg=187
