@@ -92,8 +92,11 @@ hi rustSuper ctermfg=176
 
 " don't forget to link after/ in ~/.vim/
 hi MyParens ctermfg=187
+" hi MyDoubleColons ctermfg=061
 hi MySemicolons ctermfg=187
 hi MyAngleBrace ctermfg=079
+hi rsDelimiter ctermfg=187
+hi rsModule ctermfg=187
 hi rsUserType ctermfg=176
 hi rsForeignType ctermfg=176
 hi rsCrateType ctermfg=176

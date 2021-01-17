@@ -1,8 +1,4 @@
 
-syn match MyParens /[\[\]\(\)\{\}\.]/
-syn match MySemicolons /;/
-syn keyword rustKeyword as
-
 syntax region rsTypeParams matchgroup=rsDelimiter start='<' end='>' keepend contains=TOP
 
 syntax match rsModule '\v(::)@<=[a-z][a-z0-9_]*'
@@ -53,7 +49,7 @@ call MatchCrateLocal('[a-z][a-z0-9_]*(\()@=', 'rsCrateFunc', '')
 syntax match rsUserMethod '\v(\.)@<=[a-z][a-z0-9_]*(\(|::)@='
 highlight default link rsUserMethod rsUserFunc
 
-syntax match rsDelimiter '[(){}\[\]|\.,:;]\+'
+syntax match rsDelimiter '[(){}\[\]|\.,;]\+'
 
 " syn match MyAngleBrace '[<>]'
 syntax match rsOperator '[!%&/\*+<=>?\^-]\+'
@@ -62,3 +58,8 @@ syntax match rsOperator '[!%&/\*+<=>?\^-]\+'
 " they would be recognised as the ‘mut’ keyword, thus whatever comes after the
 " ‘mut’ is highlighted as an identifier definition.
 syntax match rsOperator '&mut'
+
+" syn match MyParens /[\[\]\(\)\{\}\.]/
+" syn match MySemicolons /;/
+" syn match MyDoubleColons /::/
+" syn keyword rustKeyword as
