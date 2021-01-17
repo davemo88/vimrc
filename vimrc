@@ -12,6 +12,9 @@ Plug 'leafgarland/typescript-vim'
 
 Plug 'peitalin/vim-jsx-typescript'
 
+" i'm such a boss
+Plug 'davemo88/rust-fade'
+
 call plug#end()
 
 syntax enable
