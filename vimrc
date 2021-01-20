@@ -4,7 +4,7 @@ Plug 'scrooloose/nerdtree'
 
 Plug 'rust-lang/rust.vim'
 
-" Plug 'arzg/vim-rust-syntax-ext'
+Plug 'arzg/vim-rust-syntax-ext'
 
 Plug 'Valloric/YouCompleteMe'
 
@@ -58,15 +58,6 @@ function! SynStack()
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
 
-let g:ycm_language_server =
-\ [
-\   {
-\     'name': 'rust',
-\     'cmdline': ['rust-analyzer'],
-\     'filetypes': ['rust'],
-\     'project_root_files': ['Cargo.toml']
-\   }
-\ ]
 " set filetypes as typescript.tsx
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
 autocmd Filetype typescript.tsx set softtabstop=2
@@ -76,4 +67,3 @@ autocmd Filetype typescript set softtabstop=2
 autocmd Filetype typescript set sw=2
 autocmd Filetype typescript set ts=2
 " inoremap <Esc> <Esc>:w<Cr>
-autocmd Syntax syn match MyParens /[\[\]\(\)\{\}]/
