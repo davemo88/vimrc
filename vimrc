@@ -8,20 +8,12 @@ Plug 'arzg/vim-rust-syntax-ext'
 
 Plug 'Valloric/YouCompleteMe'
 
-Plug 'leafgarland/typescript-vim'
-
-Plug 'peitalin/vim-jsx-typescript'
-
-" i'm such a boss
 Plug 'davemo88/rust-fade'
 
 call plug#end()
 
 syntax enable
 colorscheme fade 
-
-" autocomplete parens and the like and insert a newline 
-let delimitMate_expand_cr = 1
 
 " use 4 spaces instead of tabs
 set tabstop=8
@@ -30,24 +22,24 @@ set expandtab
 set shiftwidth=4
 set smarttab
 
-" open a NERDTree window on start
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-" toggle NERDTRee window
-map <C-n> :NERDTreeToggle<CR>
 " make it a lil bigger
 let g:NERDTreeWinSize=42
 
 set pastetoggle=<F2>
 
-augroup YcmGoto
-    autocmd!
-    autocmd FileType rust nnoremap <silent> gd :YcmCompleter GoToDefinition<CR>
-    autocmd FileType rust nnoremap <silent> <leader>gd :YcmCompleter GetDoc<CR>
-augroup END
-
 let g:ycm_goto_buffer_command='split-or-existing-window'
 let g:ycm_autoclose_preview_window_after_insertion = 1
+
+augroup vimrc_autocmd
+" open a NERDTree window on start
+    autocmd!
+    autocmd StdinReadPre * let s:std_in=1
+    autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+"    autocmd FileType rust nnoremap <silent> gd :YcmCompleter GoToDefinition<CR>
+"    autocmd FileType rust nnoremap <silent> <leader>gd :YcmCompleter GetDoc<CR>
+augroup END
+" toggle NERDTRee window
+map <C-n> :NERDTreeToggle<CR>
 
 " show which syntax rules are used under the cursor.
 " :call SynStack()
@@ -57,13 +49,3 @@ function! SynStack()
   endif
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
-
-" set filetypes as typescript.tsx
-autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
-autocmd Filetype typescript.tsx set softtabstop=2
-autocmd Filetype typescript.tsx set sw=2
-autocmd Filetype typescript.tsx set ts=2
-autocmd Filetype typescript set softtabstop=2
-autocmd Filetype typescript set sw=2
-autocmd Filetype typescript set ts=2
-" inoremap <Esc> <Esc>:w<Cr>
