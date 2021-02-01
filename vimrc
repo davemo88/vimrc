@@ -1,5 +1,8 @@
 call plug#begin('~/.vim/plugged')
 
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
 Plug 'tpope/vim-vinegar'
 
 Plug 'rust-lang/rust.vim'
@@ -13,7 +16,16 @@ Plug 'Valloric/YouCompleteMe'
 call plug#end()
 
 syntax enable
-" colorscheme fade 
+colorscheme fade 
+
+" show which syntax rules are used under the cursor.
+" :call SynStack()
+function! SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
 
 " use 4 spaces instead of tabs
 set tabstop=8
@@ -33,14 +45,5 @@ augroup vimrc_autocmd
     autocmd FileType rust nnoremap <silent> <leader>gd :YcmCompleter GetDoc<CR>
 augroup END
 
-" show which syntax rules are used under the cursor.
-" :call SynStack()
-function! SynStack()
-  if !exists("*synstack")
-    return
-  endif
-  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
-endfunc
-
-set timeoutlen=1000
-set ttimeoutlen=0
+let mapleader = ","
+nnoremap <silent> <leader>f :FZF<cr>
