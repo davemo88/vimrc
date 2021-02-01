@@ -13,6 +13,8 @@ Plug 'davemo88/rust-fade'
 
 Plug 'Valloric/YouCompleteMe'
 
+Plug 'leafgarland/typescript-vim'
+
 call plug#end()
 
 syntax enable
@@ -47,3 +49,4 @@ augroup END
 
 let mapleader = ","
 nnoremap <silent> <leader>f :FZF<cr>
+nnoremap <silent> <leader>F :FZF ~<cr>
