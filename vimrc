@@ -50,3 +50,4 @@ augroup END
 let mapleader = ","
 nnoremap <silent> <leader>f :FZF<cr>
 nnoremap <silent> <leader>F :FZF ~<cr>
+let $FZF_DEFAULT_COMMAND='fd --type f'
