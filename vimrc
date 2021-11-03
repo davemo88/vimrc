@@ -47,6 +47,8 @@ augroup vimrc_autocmd
     autocmd FileType rust nnoremap <silent> <leader>gd :YcmCompleter GetDoc<CR>
 augroup END
 
+let g:ycm_rust_toolchain_root=$HOME."/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/"
+
 let mapleader = ","
 nnoremap <silent> <leader>f :FZF<cr>
 nnoremap <silent> <leader>F :FZF ~<cr>
