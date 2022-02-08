@@ -20,6 +20,7 @@ Plug 'tomlion/vim-solidity'
 call plug#end()
 
 syntax enable
+syntax on
 colorscheme fade 
 
 " show which syntax rules are used under the cursor.
@@ -51,8 +52,8 @@ augroup END
 
 " remember to install rust analyzer for the toolchain:
 " e.g. rustup +nightly component add rust-analyzer-preview
-" let g:ycm_rust_toolchain_root=$HOME."/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/"
-let g:ycm_rust_toolchain_root=$HOME."/.rustup/toolchains/nightly-2021-11-12-x86_64-unknown-linux-gnu/"
+ let g:ycm_rust_toolchain_root=$HOME."/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/"
+"let g:ycm_rust_toolchain_root=$HOME."/.rustup/toolchains/nightly-2021-11-12-x86_64-unknown-linux-gnu/"
 let g:ycm_always_populate_location_list = 1
 
 let mapleader = ","
@@ -61,3 +62,4 @@ nnoremap <silent> <leader>F :FZF ~<cr>
 let $FZF_DEFAULT_COMMAND='fd --type f'
 command W w
 command Q q
+map <silent> <leader>/ :s/^/\/\//<cr>
